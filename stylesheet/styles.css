@@ -1,0 +1,43 @@
+:root {
+  --ft-rubik: 'Rubik', sans-serif;
+  --body-copy: 18px;
+  --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
+  --grayish-blue: hsl(229, 8%, 60%);
+  --very-dark-blue: hsl(229, 31%, 21%);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header,
+main,
+footer {
+  max-width: 100%;
+  margin: 0 10%;
+}
+nav {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo-container,
+.nav-link-container {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
