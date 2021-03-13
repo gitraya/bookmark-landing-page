@@ -108,6 +108,7 @@ a {
 }
 
 body {
+  position: relative;
   padding: 0;
   margin: 0;
 }
@@ -255,7 +256,7 @@ footer i:hover,
   height: max-content;
   padding: 2rem 1rem;
   border-radius: 8px;
-  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
   align-items: center;
 }
 .card:nth-of-type(2) {
@@ -484,6 +485,7 @@ footer nav div i {
     padding: 0 5%;
     align-items: center;
   }
+  .container-content-text h1,
   .container-content-text p {
     text-align: center;
   }
@@ -497,5 +499,284 @@ footer nav div i {
   }
   .FAQ-container {
     width: 70%;
+  }
+}
+
+/* Media queries on mobile device */
+@media screen and (max-width: 768px) {
+  /* Mobile navigation style */
+  .hamburger-button {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    align-items: center;
+  }
+  .hamburger-button i {
+    color: var(--very-dark-blue);
+    font-size: 22px;
+  }
+  .modal-navigation-mobile.flex {
+    display: flex;
+  }
+  .modal-navigation-mobile {
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+    background: hsla(229, 31%, 21%, 0.9);
+    width: 100vw;
+    height: 100vh;
+    padding: 0 10%;
+    left: 0;
+    top: 0;
+  }
+  .modal-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+  .modal-item a {
+    display: flex;
+    font-size: 1.5rem;
+    height: 60px;
+    color: #fff;
+  }
+  .modal-item .btn {
+    margin-top: 2rem;
+    border: 2px solid #fff !important;
+  }
+  .modal-item:nth-of-type(1) {
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .modal-item:nth-of-type(1) a {
+    height: unset;
+  }
+  .modal-item:nth-of-type(2) {
+    flex-flow: column nowrap;
+  }
+  .modal-item:nth-of-type(2) a {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1.5px solid rgb(105, 105, 105);
+  }
+  .modal-item:nth-of-type(2) a:first-of-type {
+    border-top: 1.5px solid rgb(105, 105, 105);
+  }
+  .modal-item:nth-of-type(3) {
+    height: 100px;
+    margin-top: auto;
+    justify-content: center;
+  }
+  .modal-item:nth-of-type(3) a {
+    display: flex;
+    align-items: center;
+  }
+  .modal-item:nth-of-type(3) a:nth-of-type(2) {
+    margin-left: 1rem;
+  }
+  .modal-item:nth-of-type(3) i {
+    font-size: 26px;
+  }
+
+  .container-image-hero {
+    padding: 0 0 10%;
+  }
+  .section.one .blue-shape-rounded {
+    bottom: 40%;
+  }
+  .option-content-item {
+    flex-flow: column wrap;
+  }
+  .option-content {
+    width: 100%;
+    align-items: center;
+    padding: 2rem 0 !important;
+  }
+  .option-content h2,
+  .option-content p {
+    text-align: center;
+  }
+  .container-option-content {
+    padding: 4% 10% 0;
+  }
+  .section.two .blue-shape-rounded {
+    width: 70%;
+    height: 25%;
+    bottom: 25%;
+  }
+  .FAQ-container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .container-option-link {
+    flex-flow: column wrap;
+    height: auto;
+    border-bottom: unset;
+  }
+  .option-item {
+    flex: unset;
+    width: 100%;
+    height: 60px;
+    border-bottom: 0.5px solid rgb(216, 216, 216);
+  }
+  .option-item:first-child {
+    border-top: 0.5px solid rgb(216, 216, 216);
+  }
+  .option-item.active a {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom: 4px solid var(--soft-red);
+  }
+  .option-item.active {
+    border-bottom: 0.5px solid rgb(216, 216, 216);
+  }
+  .container-head-content p {
+    margin: 0.7rem 10%;
+  }
+  footer nav,
+  .container-nav-footer {
+    height: auto;
+    flex-flow: column nowrap !important;
+    justify-content: space-evenly;
+  }
+  footer nav {
+    padding: 5%;
+  }
+  footer nav .flex.row {
+    width: 100%;
+  }
+  .container-nav-footer .nav-link,
+  nav .flex.row i {
+    margin: 1rem 0;
+  }
+  nav .flex.row a:nth-of-type(2) i {
+    margin-left: 2rem;
+  }
+  footer nav .flex.row:nth-of-type(2) {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section.one .blue-shape-rounded {
+    height: 30%;
+    bottom: 55%;
+  }
+  .container-head-content h2,
+  .container-head-content p {
+    margin: 0.7rem 10%;
+  }
+  h1.ft-3 {
+    font-size: 32px;
+  }
+  .section.two .blue-shape-rounded {
+    height: 20%;
+    bottom: 30%;
+  }
+  .grid.card-container {
+    padding: 2rem 10%;
+  }
+  .card {
+    width: 100%;
+  }
+  .card:last-of-type {
+    margin-top: 2.5rem;
+  }
+  .section.five div.flex.column {
+    flex-flow: column nowrap;
+    padding: 0 5%;
+  }
+  .section.five h2,
+  .section.five p {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+  form {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .input-control {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .input-wrap {
+    width: 100%;
+  }
+  .input-control .input-wrap .btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .modal-navigation-mobile {
+    padding: 0 5%;
+  }
+
+  .container-head-content p,
+  .container-option-link,
+  .container-head-content h2,
+  .container-head-content p {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .container-btn-cta .btn {
+    font-size: 14px;
+  }
+  .container-option-content,
+  .grid.card-container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .card .btn.btn-cta.purple {
+    width: 100%;
+    text-align: center;
+  }
+  .FAQ-container {
+    width: 90%;
+  }
+  .faq-item h3 {
+    height: 80px;
+  }
+  .attribution {
+    margin: 1rem 5%;
+    text-align: center;
+  }
+  .input-control {
+    flex-flow: column nowrap;
+  }
+  .input-wrap .btn.fail {
+    margin-bottom: 2rem;
+  }
+  .input-control .btn.submit {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .input-wrap .images {
+    top: 25%;
+    transform: translateY(-25%);
+  }
+  .input-wrap small {
+    bottom: 0px;
+    padding: 14px 12px 8px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .section.one .blue-shape-rounded {
+    height: 30%;
+    bottom: 57%;
+  }
+  .section.two .blue-shape-rounded {
+    height: 18%;
+    bottom: 34%;
+  }
+  .container-btn-cta .btn {
+    font-size: 12px;
   }
 }

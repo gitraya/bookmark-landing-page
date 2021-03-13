@@ -3,6 +3,10 @@ const buttonOptionToggle = document.querySelectorAll('.op-link');
 const allFaqContent = document.querySelectorAll('.faq-p');
 const buttonFaqToggle = document.querySelectorAll('.faq-btn');
 const email = document.querySelector('#email');
+const menuContent = document.querySelector('.modal-navigation-mobile');
+const menuNavWeb = document.querySelector('.nav-link-container');
+const showButton = document.querySelector('.bars-btn');
+const closeButton = document.querySelector('.close-modal');
 
 let listenClick = '';
 
@@ -59,6 +63,31 @@ function validateEmail(input) {
   }
 }
 
+// Function to open and close modal navigation
+function navMobileModal() {
+  console.log(menuContent.classList.contains('hide'));
+  if (menuContent.classList.contains('hide')) {
+    menuContent.className = 'modal-navigation-mobile flex column';
+    document.body.style.overflowY = 'hidden';
+  } else {
+    menuContent.className = 'modal-navigation-mobile hide';
+    document.body.style.overflowY = 'visible';
+  }
+}
+
+// Function to check if user resize the screen
+function showNavWeb() {
+  if (window.innerWidth > 768) {
+    showButton.parentElement.className = 'hamburger-button hide';
+    menuContent.className = 'modal-navigation-mobile hide';
+    menuNavWeb.className = 'nav-link-container flex row';
+  } else {
+    showButton.parentElement.className = 'hamburger-button flex row';
+    menuContent.className = 'modal-navigation-mobile hide';
+    menuNavWeb.className = 'nav-link-container hide';
+  }
+}
+
 // Running all functions
 toggleOption(allContent, buttonOptionToggle);
 toggleOption(allFaqContent, buttonFaqToggle);
@@ -67,3 +96,6 @@ document.querySelector('.btn.submit').addEventListener('click', (e) => {
   e.preventDefault();
   validateEmail(email);
 });
+showButton.addEventListener('click', navMobileModal);
+closeButton.addEventListener('click', navMobileModal);
+window.addEventListener('resize', showNavWeb);
