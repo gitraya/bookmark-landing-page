@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://ediehomepage-gitraya.netlify.app/">
+    <a href="https://gitraya.github.io/bookmark-landing-page/">
       Demo
     </a>
     <span> | </span>
@@ -29,7 +29,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/gitraya/edie-homepage/blob/main/assets/overviewediehomepage.png)
+![screenshot](https://github.com/gitraya/bookmark-landing-page/blob/main/overviewbookmark.jpg)
 
 ## Built With
 
