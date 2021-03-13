@@ -10,10 +10,8 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
-      integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu"
-      crossorigin="anonymous"
     />
     <link
       rel="icon"
@@ -78,22 +76,24 @@
         </div>
         <div>
           <div class="container-option-link flex row">
-            <div class="option-item flex row">
-              <a class="cl-gb ft-500" href="javascript:void(0)"
+            <div class="option-item active flex row">
+              <a class="op-link cl-gb ft-500" href="javascript:void(0)"
                 >Simple Bookmarking</a
               >
             </div>
             <div class="option-item flex row">
-              <a class="cl-gb ft-500" href="javascript:void(0)"
+              <a class="op-link cl-gb ft-500" href="javascript:void(0)"
                 >Speedy Searching</a
               >
             </div>
             <div class="option-item flex row">
-              <a class="cl-gb ft-500" href="javascript:void(0)">Easy Sharing</a>
+              <a class="op-link cl-gb ft-500" href="javascript:void(0)"
+                >Easy Sharing</a
+              >
             </div>
           </div>
           <div class="container-option-content">
-            <div class="flex row option-content-item hide">
+            <div class="flex row option-content-item">
               <div class="option-content flex column">
                 <img
                   class="images"
@@ -133,7 +133,7 @@
                 >
               </div>
             </div>
-            <div class="flex row option-content-item">
+            <div class="flex row option-content-item hide">
               <div class="option-content flex column">
                 <img
                   class="images"
@@ -157,55 +157,68 @@
           <div class="blue-shape-rounded"></div>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Download the extension</h2>
+      <section class="section three flex column">
+        <div class="container-head-content flex column">
+          <h2 class="mx-1">Download the extension</h2>
           <p>
             We’ve got more browsers in the pipeline. Please do let us know if
             you’ve got a favourite you’d like us to prioritize.
           </p>
         </div>
-        <div>
-          <div>
-            <img src="./assets/images/logo-chrome.svg" alt="" />
-            <h3>Add to Chrome</h3>
-            <span>Minimum version 62</span>
-            <a href="javascript:void(0)">Add & Install Extension</a>
+        <div class="grid card-container">
+          <div class="card flex column">
+            <img class="images" src="./assets/images/logo-chrome.svg" alt="" />
+            <h3 class="mt-2">Add to Chrome</h3>
+            <p class="mx-05">Minimum version 62</p>
+            <div class="dotted-spaced"></div>
+            <a class="btn btn-cta purple" href="javascript:void(0)"
+              >Add & Install Extension</a
+            >
           </div>
-          <div>
-            <img src="./assets/images/logo-firefox.svg" alt="" />
-            <h3>Add to Firefox</h3>
-            <span>Minimum version 55</span>
-            <a href="javascript:void(0)">Add & Install Extension</a>
+          <div class="card flex column">
+            <img class="images" src="./assets/images/logo-firefox.svg" alt="" />
+            <h3 class="mt-2">Add to Firefox</h3>
+            <p class="mx-05">Minimum version 55</p>
+            <div class="dotted-spaced"></div>
+            <a class="btn btn-cta purple" href="javascript:void(0)"
+              >Add & Install Extension</a
+            >
           </div>
-          <div>
-            <img src="./assets/images/logo-opera.svg" alt="" />
-            <h3>Add to Opera</h3>
-            <span>Minimum version 46</span>
-            <a href="javascript:void(0)">Add & Install Extension</a>
+          <div class="card flex column">
+            <img class="images" src="./assets/images/logo-opera.svg" alt="" />
+            <h3 class="mt-2">Add to Opera</h3>
+            <p class="mx-05">Minimum version 46</p>
+            <div class="dotted-spaced"></div>
+            <a class="btn btn-cta purple" href="javascript:void(0)"
+              >Add & Install Extension</a
+            >
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Frequently Asked Questions</h2>
+      <section class="section four">
+        <div class="container-head-content flex column">
+          <h2 class="mx-1">Frequently Asked Questions</h2>
           <p>
             Here are some of our FAQs. If you have any other questions you’d
             like answered please feel free to email us.
           </p>
         </div>
-        <div>
-          <div>
-            <h3>What is Bookmark?</h3>
-            <p>
+        <div class="FAQ-container flex column">
+          <div class="faq-item">
+            <h3 class="faq-btn ft-400">What is Bookmark? <i class="material-icons-round">
+              keyboard_arrow_down
+            </i></h3>
+            <p class="faq-p hide">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
               tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
               quis quam ornare mattis.
-            </p>
+            </class=>
           </div>
-          <div>
-            <h3>How can I request a new browser?</h3>
-            <p>
+          <div class="faq-item">
+            <h3 class="faq-btn ft-400">How can I request a new browser? <i class="material-icons-round">
+              keyboard_arrow_down
+            </i></h3>
+            <p class="faq-p hide">
               Vivamus luctus eros aliquet convallis ultricies. Mauris augue
               massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus
               eros aliquet convallis ultricies. Mauris augue massa, ultricies
@@ -214,26 +227,30 @@
               Suspendisse imperdiet.
             </p>
           </div>
-          <div>
-            <h3>Is there a mobile app?</h3>
-            <p>
+          <div class="faq-item">
+            <h3 class="faq-btn ft-400">Is there a mobile app? <i class="material-icons-round">
+              keyboard_arrow_down
+            </i></h3>
+            <p class="faq-p hide">
               Sed consectetur quam id neque fermentum accumsan. Praesent luctus
               vestibulum dolor, ut condimentum urna vulputate eget. Cras in
               ligula quis est pharetra mattis sit amet pharetra purus. Sed
               sollicitudin ex et ultricies bibendum.
             </p>
           </div>
-          <div>
-            <h3>What about other Chromium browsers?</h3>
-            <p>
+          <div class="faq-item">
+            <h3 class="faq-btn ft-400">What about other Chromium browsers? <i class="material-icons-round">
+              keyboard_arrow_down
+            </i></h3>
+            <p class="faq-p hide">
               Integer condimentum ipsum id imperdiet finibus. Vivamus in
               placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida
               pellentesque non ut velit.
             </p>
           </div>
-          <div>
-            <a href="javascript:void(0)">More Info</a>
-          </div>
+        </div>
+        <div class="container-btn-faq flex column">
+          <a class="btn btn-cta purple" href="javascript:void(0)">More Info</a>
         </div>
       </section>
       <section>
