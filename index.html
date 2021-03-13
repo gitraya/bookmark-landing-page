@@ -26,40 +26,50 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo-container">
+      <nav class="flex row">
+        <div class="logo-container flex row">
           <img src="./assets/images/logo-bookmark.svg" alt="Bookmark Logo" />
         </div>
-        <div class="nav-link-container">
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
-          <a href="#login">Login</a>
+        <div class="nav-link-container flex row">
+          <a class="nav-link" href="#features"><small>Features</small></a>
+          <a class="nav-link" href="#pricing"><small>Pricing</small></a>
+          <a class="nav-link" href="#contact"><small>Contact</small></a>
+          <a class="nav-link btn btn-cta-nav ft-500" href="#login"
+            ><small>Login</small></a
+          >
         </div>
       </nav>
     </header>
-    <main>
-      <section>
-        <div>
-          <h1>A Simple Bookmark Manager</h1>
+    <main class="flex column">
+      <section class="section one flex row">
+        <div class="container-content-text flex column">
+          <h1 class="ft-500 cl-vdb ft-3 mx-1">A Simple Bookmark Manager</h1>
           <p>
             A clean and simple interface to organize your favourite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
           </p>
-          <div>
-            <a href="javascript:void(0)">Get it on Chrome</a>
-            <a href="javascript:void(0)">Get it on Firefox</a>
+          <div class="container-btn-cta mt-1 flex row">
+            <a class="btn btn-cta purple" href="javascript:void(0)"
+              >Get it on Chrome</a
+            >
+            <a class="btn btn-cta white" href="javascript:void(0)"
+              >Get it on Firefox</a
+            >
           </div>
         </div>
-        <div>
-          <img src="./assets/images/illustration-hero.svg" alt="Image Hero" />
+        <div class="container-image-hero flex column">
+          <img
+            class="images"
+            src="./assets/images/illustration-hero.svg"
+            alt="Image Hero"
+          />
         </div>
         <div class="blue-shape-rounded"></div>
       </section>
-      <section>
-        <div>
-          <h2>Features</h2>
+      <section class="section two flex column">
+        <div class="container-head-content flex column">
+          <h2 class="mx-1">Features</h2>
           <p>
             Our aim is to make it quick and easy for you to access your
             favourite websites. Your bookmarks sync between your devices so you
@@ -67,61 +77,80 @@
           </p>
         </div>
         <div>
-          <div>
-            <a href="javascript:void(0)">Simple Bookmarking</a>
-            <a href="javascript:void(0)">Speedy Searching</a>
-            <a href="javascript:void(0)">Easy Sharing</a>
+          <div class="container-option-link flex row">
+            <div class="option-item flex row">
+              <a class="cl-gb ft-500" href="javascript:void(0)"
+                >Simple Bookmarking</a
+              >
+            </div>
+            <div class="option-item flex row">
+              <a class="cl-gb ft-500" href="javascript:void(0)"
+                >Speedy Searching</a
+              >
+            </div>
+            <div class="option-item flex row">
+              <a class="cl-gb ft-500" href="javascript:void(0)">Easy Sharing</a>
+            </div>
           </div>
-          <div>
-            <div>
-              <div>
+          <div class="container-option-content">
+            <div class="flex row option-content-item hide">
+              <div class="option-content flex column">
                 <img
+                  class="images"
                   src="./assets/images/illustration-features-tab-1.svg"
                   alt=""
                 />
               </div>
-              <div>
-                <h3>Bookmark in one click</h3>
+              <div class="option-content flex column">
+                <h2 class="mx-1">Bookmark in one click</h2>
                 <p>
                   Organize your bookmarks however you like. Our simple
                   drag-and-drop interface gives you complete control over how
                   you manage your favourite sites.
                 </p>
-                <a href="javascript:void(0)">More Info</a>
+                <a class="btn btn-cta purple mt-1" href="javascript:void(0)"
+                  >More Info</a
+                >
               </div>
             </div>
-            <div>
-              <div>
+            <div class="flex row option-content-item hide">
+              <div class="option-content flex column">
                 <img
+                  class="images"
                   src="./assets/images/illustration-features-tab-2.svg"
                   alt=""
                 />
               </div>
-              <div>
-                <h3>Intelligent search</h3>
+              <div class="option-content flex column">
+                <h2 class="mx-1">Intelligent search</h2>
                 <p>
                   Our powerful search feature will help you find saved sites in
                   no time at all. No need to trawl through all of your
                   bookmarks.
                 </p>
-                <a href="javascript:void(0)">More Info</a>
+                <a class="btn btn-cta purple mt-1" href="javascript:void(0)"
+                  >More Info</a
+                >
               </div>
             </div>
-            <div>
-              <div>
+            <div class="flex row option-content-item">
+              <div class="option-content flex column">
                 <img
+                  class="images"
                   src="./assets/images/illustration-features-tab-3.svg"
                   alt=""
                 />
               </div>
-              <div>
-                <h3>Share your bookmarks</h3>
+              <div class="option-content flex column">
+                <h2 class="mx-1">Share your bookmarks</h2>
                 <p>
                   Easily share your bookmarks and collections with others.
                   Create a shareable link that you can send at the click of a
                   button.
                 </p>
-                <a href="javascript:void(0)">More Info</a>
+                <a class="btn btn-cta purple mt-1" href="javascript:void(0)"
+                  >More Info</a
+                >
               </div>
             </div>
           </div>
@@ -241,5 +270,6 @@
       </p>
     </footer>
     <i class="fas fa-bars"></i>
+    <script src="./javascript/main.js"></script>
   </body>
 </html>
