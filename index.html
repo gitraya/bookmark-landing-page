@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <link
       rel="icon"
       type="image/png"
@@ -24,6 +25,7 @@
   </head>
   <body>
     <header>
+      <!-- HEADER NAVIGATION -->
       <nav class="flex row">
         <div class="logo-container flex row">
           <img src="./assets/images/logo-bookmark.svg" alt="Bookmark Logo" />
@@ -39,7 +41,10 @@
       </nav>
     </header>
     <main class="flex column">
+
+      <!-- SECTION ONE  -->
       <section class="section one flex row">
+        <!-- SECTION ONE CONTENT TEXT  -->
         <div class="container-content-text flex column">
           <h1 class="ft-500 cl-vdb ft-3 mx-1">A Simple Bookmark Manager</h1>
           <p>
@@ -56,6 +61,7 @@
             >
           </div>
         </div>
+        <!-- HERO IMAGE OF SECTION ONE  -->
         <div class="container-image-hero flex column">
           <img
             class="images"
@@ -65,7 +71,11 @@
         </div>
         <div class="blue-shape-rounded"></div>
       </section>
-      <section class="section two flex column">
+
+
+      <!-- SECTION TWO  -->
+      <section id="features" class="section two flex column">
+        <!-- SECTION TWO CONTENT TEXT  -->
         <div class="container-head-content flex column">
           <h2 class="mx-1">Features</h2>
           <p>
@@ -108,7 +118,7 @@
                   drag-and-drop interface gives you complete control over how
                   you manage your favourite sites.
                 </p>
-                <a class="btn btn-cta purple mt-1" href="javascript:void(0)"
+                <a class="btn more btn-cta purple mt-1" href="javascript:void(0)"
                   >More Info</a
                 >
               </div>
@@ -128,7 +138,7 @@
                   no time at all. No need to trawl through all of your
                   bookmarks.
                 </p>
-                <a class="btn btn-cta purple mt-1" href="javascript:void(0)"
+                <a class="btn more btn-cta purple mt-1" href="javascript:void(0)"
                   >More Info</a
                 >
               </div>
@@ -148,7 +158,7 @@
                   Create a shareable link that you can send at the click of a
                   button.
                 </p>
-                <a class="btn btn-cta purple mt-1" href="javascript:void(0)"
+                <a class="btn more btn-cta purple mt-1" href="javascript:void(0)"
                   >More Info</a
                 >
               </div>
@@ -157,7 +167,10 @@
           <div class="blue-shape-rounded"></div>
         </div>
       </section>
-      <section class="section three flex column">
+
+
+      <!-- SECTION THREE  -->
+      <section id="pricing" class="section three flex column">
         <div class="container-head-content flex column">
           <h2 class="mx-1">Download the extension</h2>
           <p>
@@ -195,6 +208,9 @@
           </div>
         </div>
       </section>
+
+
+      <!-- SECTION FOUR ABOUT FREQUENTLY ASKED QUESTIONS  -->
       <section class="section four">
         <div class="container-head-content flex column">
           <h2 class="mx-1">Frequently Asked Questions</h2>
@@ -250,43 +266,52 @@
           </div>
         </div>
         <div class="container-btn-faq flex column">
-          <a class="btn btn-cta purple" href="javascript:void(0)">More Info</a>
+          <a class="btn more btn-cta purple" href="javascript:void(0)">More Info</a>
         </div>
       </section>
-      <section>
-        <div>
-          <span>35,000+ already joined</span>
-          <h2>Stay up-to-date with what we’re doing</h2>
-          <form action="">
-            <div>
-              <input type="text" placeholder="Enter your email address" />
-              <input type="submit" value="Contact Us" />
+
+
+      <!-- SECTION FIVE CONTACT  -->
+      <section id="contact" class="section five flex column">
+        <div class="flex column">
+          <p>35,000+ already joined</p>
+          <h2 class="mx-1">Stay up-to-date with what we’re doing</h2>
+          <form action="#">
+            <div class="input-control flex row">
+              <div class="input-wrap">
+                <input class="btn" id="email" name="email" type="text" placeholder="Enter your email address"/>
+                <img class="images hide" src="./assets/images/icon-error.svg" alt="">
+                <small class="hide">Whoops, make sure it's an email</small>
+              </div>
+              <input class="btn submit" type="submit" value="Contact Us"/>
             </div>
           </form>
         </div>
       </section>
     </main>
-    <footer>
-      <nav>
-        <div>
-          <img src="./assets/images/logo-bookmark.svg" alt="Bookmark Logo" />
-          <a href="#features">Features</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#contact">Contact</a>
+
+    <!-- FOOTER WEBSITE -->
+    <footer class="flex column">
+      <!-- FOOTER NAVIGATION  -->
+      <nav class="flex row">
+        <div class="container-nav-footer flex row">
+          <img class="images nav-link" src="./assets/images/logo-white-bookmark.svg" alt="Bookmark Logo" />
+          <a class="nav-link" href="#features">Features</a>
+          <a class="nav-link" href="#pricing">Pricing</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </div>
-        <div>
-          <i class="fab fa-facebook-square"></i>
-          <i class="fab fa-twitter"></i>
+        <div class="flex row">
+          <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://web.facebook.com/" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
       </nav>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">gitraya</a>.
+        >. Coded by <a href="https://github.com/gitraya" target="_blank">gitraya</a>.
       </p>
     </footer>
-    <i class="fas fa-bars"></i>
     <script src="./javascript/main.js"></script>
   </body>
 </html>
