@@ -7,7 +7,6 @@ const menuContent = document.querySelector('.modal-navigation-mobile');
 const menuNavWeb = document.querySelector('.nav-link-container');
 const showButton = document.querySelector('.bars-btn');
 const closeButton = document.querySelector('.close-modal');
-
 let listenClick = '';
 
 // Function to toggle option based on user clicked
@@ -58,21 +57,28 @@ function validateEmail(input) {
     inputWrap.querySelector('input').classList.add('fail');
     inputWrap.querySelector('img').classList.remove('hide');
     inputWrap.querySelector('small').classList.remove('hide');
-    validateEmail(input);
     return false;
   }
 }
 
 // Function to open and close modal navigation
-function navMobileModal() {
-  console.log(menuContent.classList.contains('hide'));
-  if (menuContent.classList.contains('hide')) {
-    menuContent.className = 'modal-navigation-mobile flex column';
+function navMobileModal(containerContent) {
+  if (containerContent.classList.contains('hide')) {
+    containerContent.className = 'modal-navigation-mobile flex column';
     document.body.style.overflowY = 'hidden';
   } else {
-    menuContent.className = 'modal-navigation-mobile hide';
+    containerContent.className = 'modal-navigation-mobile hide';
     document.body.style.overflowY = 'visible';
   }
+}
+
+// Function to close modal if any link  is clicked
+function closeModal(containerContent, arrayButton) {
+  arrayButton.forEach((button) => {
+    button.addEventListener('click', () => {
+      navMobileModal(containerContent);
+    });
+  });
 }
 
 // Function to check if user resize the screen
@@ -92,10 +98,16 @@ function showNavWeb() {
 toggleOption(allContent, buttonOptionToggle);
 toggleOption(allFaqContent, buttonFaqToggle);
 clearToggle(allFaqContent, buttonFaqToggle);
+window.addEventListener('resize', showNavWeb);
+closeModal(menuContent, document.querySelectorAll('.moblink'));
+
 document.querySelector('.btn.submit').addEventListener('click', (e) => {
   e.preventDefault();
   validateEmail(email);
 });
-showButton.addEventListener('click', navMobileModal);
-closeButton.addEventListener('click', navMobileModal);
-window.addEventListener('resize', showNavWeb);
+showButton.addEventListener('click', () => {
+  navMobileModal(menuContent);
+});
+closeButton.addEventListener('click', () => {
+  navMobileModal(menuContent);
+});

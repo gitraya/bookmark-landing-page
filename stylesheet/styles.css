@@ -580,6 +580,9 @@ footer nav div i {
   .modal-item:nth-of-type(3) i {
     font-size: 26px;
   }
+  .nav-link-container {
+    display: none;
+  }
 
   .container-image-hero {
     padding: 0 0 10%;
