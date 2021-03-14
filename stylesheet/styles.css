@@ -26,6 +26,7 @@ p {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 .cl-gb {
   color: var(--grayish-blue);
